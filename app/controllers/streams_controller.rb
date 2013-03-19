@@ -22,7 +22,7 @@ class StreamsController < ApplicationController
         system_name: "il_02",
         quality: "low",
         resolution: "360x270",
-        url: "http://2222wowza1.il.kab.tv/rtplive/tv66-heb-low.stream/playlist.m3u8"
+        url: "http://wowza1.il.kab.tv/rtplive/tv66-heb-low.stream/playlist.m3u8"
       },
       {
         id: 3,
@@ -45,6 +45,16 @@ class StreamsController < ApplicationController
         quality: "high",
         resolution: "640x480",
         url: 'rtmp://flash3.eu.kab.tv/liveheb/liveheb.flv.flv'
+      },
+      {
+        id: 5,
+        channel_id: "tv66",
+        language_id: 1,
+        technology_id: 'icecast',
+        location: "israel",
+        system_name: "il_02",
+        quality: "high",
+        url: 'http://icecast.kab.tv/heb.mp3'
       },
     ]
     result.select!{|e| e[:technology_id] == params[:technology_id]} if params[:technology_id]

@@ -3,8 +3,8 @@ class LanguagesController < ApplicationController
   def index
     render json: {
       languages: [
-        { id: 1, locale: 'he', technologies: ['hls', 'flash'] },
-        { id: 3, locale: 'ru', technologies: ['hls', 'icecast'] }
+        { id: 1, locale: 'he', technology_ids: ['hls', 'flash'] },
+        { id: 3, locale: 'ru', technology_ids: ['hls', 'icecast'] }
       ],
       technologies: [
         { id: 'hls', technology_type: 'hls', media_type: 'video' },
