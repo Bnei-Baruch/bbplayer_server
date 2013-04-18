@@ -56,6 +56,16 @@ class StreamsController < ApplicationController
         quality: "high",
         url: 'http://icecast.kab.tv/heb.mp3'
       },
+      {
+        id: 6,
+        channel_id: "tv66",
+        language_id: 1,
+        technology_id: 'icecast',
+        location: "israel",
+        system_name: "il_02",
+        quality: "medium",
+        url: 'http://icecast.kab.tv/rus.mp3'
+      },
     ]
     result.select!{|e| e[:technology_id] == params[:technology_id]} if params[:technology_id]
     render json: { streams: result }
