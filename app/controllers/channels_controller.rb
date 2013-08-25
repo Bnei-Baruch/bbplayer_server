@@ -1,12 +1,13 @@
 class ChannelsController < ApplicationController
 
   def show
+    #render nothing: true
     render json: {
       channel: {
         id: 'tv66',
-        version: Time.now.to_i,
-        status: 'open'
-        #TODO: add a special status - 'refresh' - this status forces the client to reconnect to the streams.
+        version: rand(4),#Time.now.to_i,
+        status: 'open',
+        interval: 15,
       }
     }
   end
